@@ -7,13 +7,14 @@ import os
 
 app = Flask(__name__)
 
+# Load env once
+load_dotenv()
+api_token = os.getenv("JIRA_TOKEN")
+email = os.getenv("EMAIL")
+
 @app.route('/createJira', methods=['POST'])
 def createJira():
-    load_dotenv()
-    api_token = os.getenv("JIRA_TOKEN")
-    email = os.getenv("EMAIL")
-
-    # to get the webhook payload from Github
+    # get webhook payload from GitHub
     data = request.get_json()
 
     comment_body = data.get("comment", {}).get("body", "")
@@ -22,9 +23,8 @@ def createJira():
     if comment_body.strip() != "/jira":
         return jsonify({"message": "To create ticket your comment must be: /jira"}), 200
 
-    # for jira set up
+    # Jira setup
     url = "https://olaiya-olaminiyi.atlassian.net/rest/api/3/issue"
-
     auth = HTTPBasicAuth(email, api_token)
 
     headers = {
@@ -56,8 +56,7 @@ def createJira():
                 "key": "ECP"
             },
             "summary": issue_topic,
-        },
-        "update": {}
+        }
     }
 
     response = requests.post(
@@ -66,14 +65,8 @@ def createJira():
        headers=headers,
        auth=auth
     )
-    
-    return jsonify(response.json, response.status_code)
-   
-    
+
+    return jsonify(response.json()), response.status_code
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-
-
-    
-
-

@@ -9,7 +9,7 @@
 - install python-dotenv to load the secret in the .env to the code 
 
 ```
-pip install python-dotenv
+
 ```
 
 - Copy the Get all project code from the Jira api documentation. 
@@ -55,3 +55,8 @@ All these above steps will let you list al your project in your Jira, the code i
 ```
 pip install flask
 ```
+
+sudo apt update
+sudo apt install python3-pip -y
+
+18.170.59.54
