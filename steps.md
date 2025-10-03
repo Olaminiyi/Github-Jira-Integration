@@ -9,7 +9,7 @@
 - install python-dotenv to load the secret in the .env to the code 
 
 ```
-
+pip3 install python-dotenv
 ```
 
 - Copy the Get all project code from the Jira api documentation. 
