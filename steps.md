@@ -31,7 +31,7 @@ name = output[0]["name"]
 All these above steps will let you list al your project in your Jira, the code is in `list_project.py`
 
 ### To create a ticket(issue) in Jira
-- go to the doucmentation again, search for `Issues` and click on `Create issue`. 
+- go to the documentation again, search for `Issues` and click on `Create issue`. 
 
 - When you check the jira board, to create an issue(tickets); not all fields are required but the api from he documentation is bringing every. so we removed fields that are not necessary
 
