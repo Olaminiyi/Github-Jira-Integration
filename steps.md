@@ -2,7 +2,19 @@
 
 - create a project
 
+![alt text](<images/Screenshot 2025-08-28 at 12.39.43.png>)
+
+![alt text](<images/Screenshot 2025-08-28 at 12.41.49.png>)
+
 - create API token 
+
+![alt text](<images/Screenshot 2025-08-28 at 15.39.13.png>)
+
+![alt text](<images/Screenshot 2025-08-28 at 15.40.11.png>)
+
+![alt text](<images/Screenshot 2025-08-28 at 15.43.22.png>)
+
+![alt text](<images/Screenshot 2025-08-28 at 15.43.39.png>)
 
 - Create a .env document in your root folder and put the Jira token and your email there. The are seceret not to be exposed
 
@@ -28,7 +40,7 @@ output = json.loads(response.text)
 name = output[0]["name"]
 ```
 
-All these above steps will let you list al your project in your Jira, the code is in `list_project.py`
+All these above steps will let you list all your project in your Jira, the code is in `list_project.py`
 
 ### To create a ticket(issue) in Jira
 - go to the documentation again, search for `Issues` and click on `Create issue`. 
@@ -55,8 +67,10 @@ All these above steps will let you list al your project in your Jira, the code i
 ```
 pip install flask
 ```
-
+```
 sudo apt update
+```
+```
 sudo apt install python3-pip -y
-
+```
 18.170.59.54
