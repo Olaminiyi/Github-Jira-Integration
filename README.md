@@ -27,7 +27,7 @@ By setting up this integration, developers and project managers can seamlessly c
 2. The user types `/jira` in the issue comment.  
 3. The integration script (Python) listens for this event via GitHub Webhooks.  
 4. The script connects to Jira’s REST API and creates a corresponding ticket on the Jira board.  
-5. Jira ticket ID is sent back as a comment on the GitHub issue for tracking.  
+5. Jira ticket ID is sent back as a comment on the GitHub issue for tracking  
 
 ---
 
