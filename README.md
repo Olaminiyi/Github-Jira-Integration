@@ -8,7 +8,7 @@ By setting up this integration, developers and project managers can seamlessly c
 
 ## 🚀 Features
 - Create a Jira ticket directly from a GitHub issue by typing `/jira` in the comment.
-- Sync GitHub issues with Jira board for better project tracking.
+- Sync GitHub issues with Jira board for better project tracking
 - Uses **Python** for automation scripts.
 - Deployed and executed on **AWS EC2** instance.
 
